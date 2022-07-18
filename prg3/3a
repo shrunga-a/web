@@ -1,0 +1,7 @@
+var n;
+n=parseInt(prompt("enter the number:"));
+msg=("the first"+n+"number are");
+for(i=0;i<=n;i++){ 
+    msg+=i+ "\n"
+}
+alert(msg)
