@@ -1,7 +1,40 @@
-var n;
-n=parseInt(prompt("enter the number:"));
-msg=("the first"+n+"number are");
-for(i=0;i<=n;i++){ 
-    msg+=i+ "\n"
-}
-alert(msg)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonocci</title>
+</head>
+<body>
+    <script>
+        function fib(){
+           n=prompt("Enter a umber ");
+           f1=0;
+           f2=1;
+           document.write("Fibonocci series upto" +n+ " is:<br/>");
+           document.write(f1 + "<br/>" + f2  + " <br/ >");
+            for( i=3;i<=n;i++){
+             f3=f1+f2;
+             f1=f2;
+             f2=f3;
+             document.write(f3 + "<br />");
+            }
+        }
+        function square(){
+            var n=parseInt(prompt("Enter a Number"));
+            var sq;
+            var t="";
+            for(var i=1;i<=n;i++)
+            {
+                t=t+ "|" +i;
+                sq=i*i;
+                 t=t+"|" +sq+"|" +"\n"  ;
+            }
+            alert("number is \n" +t);
+        }
+    </script>
+    <h1 onclick="square ()">Square</h1>
+    <h1 onclick="fib ()">Fibonocci</h1>
+</body>
+</html>
