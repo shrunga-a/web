@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10a</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script> 
+    $(function()
+    {    $("span").text($("#a").attr('maxlength'));
+        $("#a").keyup(function(){
+            var l=$(this).attr('maxlength') -$(this).val().length;
+            $("span").text(l);
+
+        });
+        $("#agree").click(function(){
+            if($(this).is(':checked'))
+               $("sub").removeAttr('disabled');
+            else
+            $("#sub").attr('disabled','disabled');
+        });
+    });
+
+    </script>
+</head>
+<body>
+    <form>
+        <h2 for="a"> Maximun 20 character</h2>  
+        <textarea name="a" id="a" cols="30" rows="10" maxlength="20"> </textarea>      
+        <h2> <span> 20</span> character(s) are remaining  </h2>
+         <label for="agree"><input type="checkbox" name="agree" id="b" disabled="dis"> I agree to the rules</label>
+         <input id="sub" type="button" value="submit" disabled="dis">
+
+    </form>
+</body>
+</html>
